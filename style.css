@@ -205,6 +205,13 @@ ul {
     .button-add {
         border-radius: 25px;
     }
+    .button-draw {
+        width: 100%;
+        padding: 10px;
+    }
+    .button-draw img {
+        margin-right: 10px;
+    }
     
 }
 
