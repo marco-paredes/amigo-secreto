@@ -1,7 +1,5 @@
 let listaAmigos = [];
 let amigoSecreto;
-let listaNombresAsignados = [];
-
 
 function agregarAmigo(){
     let inputAmigo = document.getElementById("amigo");
@@ -24,7 +22,6 @@ function actualizarLista() {
         li.textContent=amigo;
         ulLista.appendChild(li);
     });
-    document.getElementById('sortear').removeAttribute('disabled');
 }
 
 function sortearAmigo(){
@@ -34,31 +31,25 @@ function sortearAmigo(){
     }
     let indiceAleatorio = Math.floor(Math.random()*listaAmigos.length);
     let amigoSecreto = listaAmigos[indiceAleatorio];
-    let ulResultado = document.getElementById("resultado");
-    //ulResultado.innerHTML = "";
+    let ulResultado = document.getElementById("resultado");  
     let li = document.createElement("li");
-    li.textContent=`El amigo secreto es: ${amigoSecreto}`;
+    if (li.textContent=true) {
+        ulResultado.innerHTML = "";
+    }
+    li.textContent=`El amigo secreto sorteado es: ${amigoSecreto}`;
     ulResultado.appendChild(li);
-    document.querySelector('#sortear').setAttribute('disabled','true')
+    listaAmigos = [];
     condicionesIniciales();
+    actualizarLista();
     
 }
 
 function condicionesIniciales() {
-    let ulLista = document.getElementById("listaAmigos");
-    ulLista.innerHTML = "";
-    listaAmigos = [];
-    
-
+    document.getElementById('reiniciar').removeAttribute('disabled');
 }
 
-function asignarTextoElemento(elemento, texto) {
-    let resultado = document.querySelector(elemento); //para usar la etiqueta h1 como variable
-    resultado.innerHTML = texto;
-    return;
+function reiniciar() {
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = "";
+    document.querySelector('#reiniciar');  
 }
-
-function limpiarCampo() {
-    let valorCampo = document.querySelector('#amigo').value=''; //el # se usa para que el querySelector busque por ID
-}
-

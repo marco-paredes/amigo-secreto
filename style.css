@@ -89,7 +89,10 @@ body {
 
 .button-container {
     width: 300px;
+    display: flex;
+    gap: 2em;
     justify-content: center;
+    
 }
 
 /* Estilos de entrada de texto */
@@ -152,11 +155,28 @@ ul {
     background-color: var(--color-button);
     font-size: 16px;
 }
-
 .button-draw img {
     margin-right: 40px;
 }
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+.button-restart {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+    color: var(--color-tertiary);
+    background-color: var(--color-text);
+    font-size: 16px;
+}
+.button-restart:hover {
+    background-color: var(--color-button);
+    box-shadow: 0px 15px 20px rgba(110, 116, 113, 0.4);
+    color:#fff;
+    transform: translateY(-7px);
+}
+.button-restart:active {
+    transform: translateY(-1px);
 }
