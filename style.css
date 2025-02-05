@@ -207,3 +207,45 @@ ul {
     }
     
 }
+
+@media (max-width: 375px){
+
+    .header-banner {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .input-section {
+        padding: 20px;
+        width: 100%;
+    }
+    .input-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        width: 100%;
+    }
+    .input-name {
+        border-radius: 25px;
+    }
+    .button-container {
+        width: 180px;
+        display: flex;
+        gap: 1em;
+    }
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+        
+    .button-add {
+        border-radius: 25px;
+    }
+    .button-draw {
+        width: 100%;
+        padding: 10px;
+    }
+    .button-draw img {
+        margin-right: 10px;
+    }
+}
